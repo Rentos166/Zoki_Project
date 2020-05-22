@@ -8,6 +8,8 @@ namespace Zoki_Project
 {
     static class Program
     {
+        //Создание статистического экземплеяра класса модели ADO.EDM
+        public static Zoki_ProjectEntities1 zokiDb = new Zoki_ProjectEntities1();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +18,7 @@ namespace Zoki_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Menu());
         }
     }
 }
