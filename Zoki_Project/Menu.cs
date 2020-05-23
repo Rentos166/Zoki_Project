@@ -47,5 +47,23 @@ namespace Zoki_Project
             Form formProviders = new FormProviders();
             formProviders.Show();
         }
+
+        private void buttonOpenProducts_Click(object sender, EventArgs e)
+        {
+            Form formProducts = new FormProducts();
+            formProducts.Show();
+        }
+
+        private void buttonOpenComposition_Click(object sender, EventArgs e)
+        {
+            Form formComposition = new FormComposition();
+            formComposition.Show();
+        }
+
+        private void buttonOpenCustoms_Click(object sender, EventArgs e)
+        {
+            Form formCustoms = new FormCustoms();
+            formCustoms.Show();
+        }
     }
 }

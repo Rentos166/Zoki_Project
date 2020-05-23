@@ -28,10 +28,10 @@ namespace Zoki_Project
                     clientsSet.Firstname,
                     clientsSet.MiddleName,
                     clientsSet.LastName,
+                    "г. " + clientsSet.Address_City+", " + "ул. " + clientsSet.Address_Street+", "+
+                    "д. " + clientsSet.Address_House + ", " + "кв. " + clientsSet.Address_Room,
                     clientsSet.Phone,
                     clientsSet.Email,
-                    clientsSet.Address
-
                 });
                 //указываем по какому тегу будем брать элементы
                 item.Tag = clientsSet;
@@ -72,7 +72,10 @@ namespace Zoki_Project
                 clientsSet.LastName = textBoxLastName.Text;
                 clientsSet.Phone = textBoxPhone.Text;
                 clientsSet.Email = textBoxEmail.Text;
-                clientsSet.Address = textBoxAddress.Text;
+                clientsSet.Address_City = textBoxCity.Text;
+                clientsSet.Address_House = textBoxHouse.Text;
+                clientsSet.Address_Street = textBoxStreet.Text;
+                clientsSet.Address_Room = textBoxRoom.Text;
                 if (clientsSet.Firstname == "" || clientsSet.MiddleName == "" || clientsSet.LastName == "")
                 {
                     throw new Exception("Не заполнены поля ФИО");
@@ -101,7 +104,10 @@ namespace Zoki_Project
                     clientsSet.LastName = textBoxLastName.Text;
                     clientsSet.Phone = textBoxPhone.Text;
                     clientsSet.Email = textBoxEmail.Text;
-                    clientsSet.Address = textBoxAddress.Text;
+                    clientsSet.Address_City = textBoxCity.Text;
+                    clientsSet.Address_House = textBoxHouse.Text;
+                    clientsSet.Address_Street = textBoxStreet.Text;
+                    clientsSet.Address_Room = textBoxRoom.Text;
                     if (clientsSet.Firstname == "" || clientsSet.MiddleName == "" || clientsSet.LastName == "")
                     {
                         throw new Exception("Не заполнены поля ФИО");
@@ -127,7 +133,10 @@ namespace Zoki_Project
                 textBoxLastName.Text = clientsSet.LastName;
                 textBoxPhone.Text = clientsSet.Phone;
                 textBoxEmail.Text = clientsSet.Email;
-                textBoxAddress.Text = clientsSet.Address;
+                textBoxCity.Text = clientsSet.Address_City;
+                textBoxHouse.Text = clientsSet.Address_House;
+                textBoxStreet.Text = clientsSet.Address_Street;
+                textBoxRoom.Text = clientsSet.Address_Room;
             }
             else
             {
@@ -137,13 +146,15 @@ namespace Zoki_Project
                 textBoxLastName.Text = "";
                 textBoxPhone.Text = "";
                 textBoxEmail.Text = "";
-                textBoxAddress.Text = "";
+                textBoxCity.Text = "";
+                textBoxStreet.Text = "";
+                textBoxHouse.Text = "";
+                textBoxRoom.Text = "";
             }
         }
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
-            //пробуем совершить действие
             try
             {
                 //если выбран 1 элемент из listView
@@ -164,14 +175,18 @@ namespace Zoki_Project
                 textBoxLastName.Text = "";
                 textBoxPhone.Text = "";
                 textBoxEmail.Text = "";
-                textBoxAddress.Text = "";
+                textBoxCity.Text = "";
+                textBoxStreet.Text = "";
+                textBoxHouse.Text = "";
+                textBoxRoom.Text = "";
             }
-            //если возникает какая-то ошибка, к примеру, запись используется, выводим всплывающее сообщение
             catch
             {
                 //вызываем метод для всплывающего окна, в котором указываем текст, заголовок, кнопку и иконку
                 MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
     }
 }

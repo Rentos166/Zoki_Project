@@ -16,10 +16,13 @@ namespace Zoki_Project
     {
         public int Id { get; set; }
         public int IdClient { get; set; }
+        public int IdPersonal { get; set; }
         public int IdProduct { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public int NumberProduct { get; set; }
+        public string Date { get; set; }
     
         public virtual ClientSet ClientSet { get; set; }
+        public virtual PersonalSet PersonalSet { get; set; }
         public virtual ProductSet ProductSet { get; set; }
     }
 }

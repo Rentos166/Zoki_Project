@@ -25,7 +25,7 @@ namespace Zoki_Project
         public int IdProvider { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
-        public Nullable<int> Number { get; set; }
+        public int Number { get; set; }
         public int Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

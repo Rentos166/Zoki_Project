@@ -13,9 +13,12 @@
           <Property Name="Firstname" Type="nvarchar(max)" />
           <Property Name="MiddleName" Type="nvarchar(max)" />
           <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Address_City" Type="nvarchar(max)" />
+          <Property Name="Address_Street" Type="nvarchar(max)" />
+          <Property Name="Address_House" Type="nvarchar(max)" />
+          <Property Name="Address_Room" Type="nvarchar(max)" />
           <Property Name="Phone" Type="nvarchar(max)" />
           <Property Name="Email" Type="nvarchar(max)" />
-          <Property Name="Address" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="CompositionSet">
           <Key>
@@ -24,7 +27,6 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdProduct" Type="int" Nullable="false" />
           <Property Name="IdProvider" Type="int" Nullable="false" />
-          <Property Name="Number" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomSet">
           <Key>
@@ -32,8 +34,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="IdPersonal" Type="int" Nullable="false" />
           <Property Name="IdProduct" Type="int" Nullable="false" />
-          <Property Name="Date" Type="date" />
+          <Property Name="NumberProduct" Type="int" Nullable="false" />
+          <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="FinanceSet">
           <Key>
@@ -50,9 +54,10 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="IdPersonal" Type="int" Nullable="false" />
           <Property Name="NumberRoom" Type="int" Nullable="false" />
           <Property Name="TypeRoom" Type="nvarchar(max)" />
-          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="PersonalSet">
           <Key>
@@ -70,11 +75,11 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdProvider" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Number" Type="int" />
+          <Property Name="Number" Type="int" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ProviderSet">
@@ -83,9 +88,12 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CompanyName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TypeProduct" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Product" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Phone" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Address_City" Type="nvarchar(max)" />
+          <Property Name="Address_Street" Type="nvarchar(max)" />
+          <Property Name="Address_House" Type="nvarchar(max)" />
           <Property Name="Email" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Users">
@@ -133,6 +141,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CustomSet_PersonalSet">
+          <End Role="PersonalSet" Type="Self.PersonalSet" Multiplicity="1" />
+          <End Role="CustomSet" Type="Self.CustomSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CustomSet">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CustomSet_ProductSet">
           <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="1" />
           <End Role="CustomSet" Type="Self.CustomSet" Multiplicity="*" />
@@ -154,6 +174,18 @@
             </Principal>
             <Dependent Role="HotelSet">
               <PropertyRef Name="IdClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelSet_PersonalSet">
+          <End Role="PersonalSet" Type="Self.PersonalSet" Multiplicity="1" />
+          <End Role="HotelSet" Type="Self.HotelSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HotelSet">
+              <PropertyRef Name="IdPersonal" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -191,12 +223,20 @@
             <End Role="ClientSet" EntitySet="ClientSet" />
             <End Role="CustomSet" EntitySet="CustomSet" />
           </AssociationSet>
+          <AssociationSet Name="FK_CustomSet_PersonalSet" Association="Self.FK_CustomSet_PersonalSet">
+            <End Role="PersonalSet" EntitySet="PersonalSet" />
+            <End Role="CustomSet" EntitySet="CustomSet" />
+          </AssociationSet>
           <AssociationSet Name="FK_CustomSet_ProductSet" Association="Self.FK_CustomSet_ProductSet">
             <End Role="ProductSet" EntitySet="ProductSet" />
             <End Role="CustomSet" EntitySet="CustomSet" />
           </AssociationSet>
           <AssociationSet Name="FK_HotelSet_ClientSet" Association="Self.FK_HotelSet_ClientSet">
             <End Role="ClientSet" EntitySet="ClientSet" />
+            <End Role="HotelSet" EntitySet="HotelSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelSet_PersonalSet" Association="Self.FK_HotelSet_PersonalSet">
+            <End Role="PersonalSet" EntitySet="PersonalSet" />
             <End Role="HotelSet" EntitySet="HotelSet" />
           </AssociationSet>
           <AssociationSet Name="FK_ProductSet_ProductSet" Association="Self.FK_ProductSet_ProductSet">
@@ -217,9 +257,12 @@
           <Property Name="Firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_House" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_Room" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CustomSet" Relationship="Self.FK_CustomSet_ClientSet" FromRole="ClientSet" ToRole="CustomSet" />
           <NavigationProperty Name="HotelSet" Relationship="Self.FK_HotelSet_ClientSet" FromRole="ClientSet" ToRole="HotelSet" />
         </EntityType>
@@ -230,7 +273,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdProduct" Type="Int32" Nullable="false" />
           <Property Name="IdProvider" Type="Int32" Nullable="false" />
-          <Property Name="Number" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ProductSet" Relationship="Self.FK_CompositionSet_ProductSet" FromRole="CompositionSet" ToRole="ProductSet" />
           <NavigationProperty Name="ProviderSet" Relationship="Self.FK_CompositionSet_ProviderSet" FromRole="CompositionSet" ToRole="ProviderSet" />
         </EntityType>
@@ -240,9 +282,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="IdPersonal" Type="Int32" Nullable="false" />
           <Property Name="IdProduct" Type="Int32" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="NumberProduct" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="ClientSet" Relationship="Self.FK_CustomSet_ClientSet" FromRole="CustomSet" ToRole="ClientSet" />
+          <NavigationProperty Name="PersonalSet" Relationship="Self.FK_CustomSet_PersonalSet" FromRole="CustomSet" ToRole="PersonalSet" />
           <NavigationProperty Name="ProductSet" Relationship="Self.FK_CustomSet_ProductSet" FromRole="CustomSet" ToRole="ProductSet" />
         </EntityType>
         <EntityType Name="FinanceSet">
@@ -260,10 +305,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="IdPersonal" Type="Int32" Nullable="false" />
           <Property Name="NumberRoom" Type="Int32" Nullable="false" />
           <Property Name="TypeRoom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="ClientSet" Relationship="Self.FK_HotelSet_ClientSet" FromRole="HotelSet" ToRole="ClientSet" />
+          <NavigationProperty Name="PersonalSet" Relationship="Self.FK_HotelSet_PersonalSet" FromRole="HotelSet" ToRole="PersonalSet" />
         </EntityType>
         <EntityType Name="PersonalSet">
           <Key>
@@ -276,16 +323,18 @@
           <Property Name="Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="WorkTime" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CustomSet" Relationship="Self.FK_CustomSet_PersonalSet" FromRole="PersonalSet" ToRole="CustomSet" />
+          <NavigationProperty Name="HotelSet" Relationship="Self.FK_HotelSet_PersonalSet" FromRole="PersonalSet" ToRole="HotelSet" />
         </EntityType>
         <EntityType Name="ProductSet">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdProvider" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Number" Type="Int32" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CompositionSet" Relationship="Self.FK_CompositionSet_ProductSet" FromRole="ProductSet" ToRole="CompositionSet" />
           <NavigationProperty Name="CustomSet" Relationship="Self.FK_CustomSet_ProductSet" FromRole="ProductSet" ToRole="CustomSet" />
@@ -297,9 +346,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TypeProduct" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Product" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address_House" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="CompositionSet" Relationship="Self.FK_CompositionSet_ProviderSet" FromRole="ProviderSet" ToRole="CompositionSet" />
           <NavigationProperty Name="ProductSet" Relationship="Self.FK_ProductSet_ProductSet" FromRole="ProviderSet" ToRole="ProductSet" />
@@ -361,6 +413,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CustomSet_PersonalSet">
+          <End Role="PersonalSet" Type="Self.PersonalSet" Multiplicity="1" />
+          <End Role="CustomSet" Type="Self.CustomSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CustomSet">
+              <PropertyRef Name="IdPersonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CustomSet_ProductSet">
           <End Role="ProductSet" Type="Self.ProductSet" Multiplicity="1" />
           <End Role="CustomSet" Type="Self.CustomSet" Multiplicity="*" />
@@ -370,6 +434,18 @@
             </Principal>
             <Dependent Role="CustomSet">
               <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HotelSet_PersonalSet">
+          <End Role="PersonalSet" Type="Self.PersonalSet" Multiplicity="1" />
+          <End Role="HotelSet" Type="Self.HotelSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonalSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HotelSet">
+              <PropertyRef Name="IdPersonal" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -411,9 +487,17 @@
             <End Role="ProviderSet" EntitySet="ProviderSet" />
             <End Role="CompositionSet" EntitySet="CompositionSet" />
           </AssociationSet>
+          <AssociationSet Name="FK_CustomSet_PersonalSet" Association="Self.FK_CustomSet_PersonalSet">
+            <End Role="PersonalSet" EntitySet="PersonalSet" />
+            <End Role="CustomSet" EntitySet="CustomSet" />
+          </AssociationSet>
           <AssociationSet Name="FK_CustomSet_ProductSet" Association="Self.FK_CustomSet_ProductSet">
             <End Role="ProductSet" EntitySet="ProductSet" />
             <End Role="CustomSet" EntitySet="CustomSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HotelSet_PersonalSet" Association="Self.FK_HotelSet_PersonalSet">
+            <End Role="PersonalSet" EntitySet="PersonalSet" />
+            <End Role="HotelSet" EntitySet="HotelSet" />
           </AssociationSet>
           <AssociationSet Name="FK_ProductSet_ProductSet" Association="Self.FK_ProductSet_ProductSet">
             <End Role="ProviderSet" EntitySet="ProviderSet" />
@@ -433,9 +517,12 @@
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
+                <ScalarProperty Name="Address_Room" ColumnName="Address_Room" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -445,7 +532,6 @@
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
                 <ScalarProperty Name="IdProvider" ColumnName="IdProvider" />
-                <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -454,7 +540,9 @@
               <MappingFragment StoreEntitySet="CustomSet">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
                 <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+                <ScalarProperty Name="NumberProduct" ColumnName="NumberProduct" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -474,6 +562,7 @@
               <MappingFragment StoreEntitySet="HotelSet">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="IdPersonal" ColumnName="IdPersonal" />
                 <ScalarProperty Name="NumberRoom" ColumnName="NumberRoom" />
                 <ScalarProperty Name="TypeRoom" ColumnName="TypeRoom" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -510,9 +599,12 @@
               <MappingFragment StoreEntitySet="ProviderSet">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="TypeProduct" ColumnName="TypeProduct" />
                 <ScalarProperty Name="Product" ColumnName="Product" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Address_City" ColumnName="Address_City" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_House" ColumnName="Address_House" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>

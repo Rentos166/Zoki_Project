@@ -41,6 +41,7 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxTimeWork = new System.Windows.Forms.TextBox();
             this.listViewPersonal = new System.Windows.Forms.ListView();
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MiddleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,7 +52,6 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,9 +61,9 @@
             this.labelFirstName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelFirstName.Location = new System.Drawing.Point(9, 16);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(33, 15);
+            this.labelFirstName.Size = new System.Drawing.Size(36, 15);
             this.labelFirstName.TabIndex = 0;
-            this.labelFirstName.Text = "Имя";
+            this.labelFirstName.Text = "Имя:";
             // 
             // labelLastName
             // 
@@ -71,9 +71,9 @@
             this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLastName.Location = new System.Drawing.Point(9, 57);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(62, 15);
+            this.labelLastName.Size = new System.Drawing.Size(65, 15);
             this.labelLastName.TabIndex = 1;
-            this.labelLastName.Text = "Фамилия";
+            this.labelLastName.Text = "Фамилия:";
             // 
             // labelMiddleName
             // 
@@ -81,9 +81,9 @@
             this.labelMiddleName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMiddleName.Location = new System.Drawing.Point(9, 96);
             this.labelMiddleName.Name = "labelMiddleName";
-            this.labelMiddleName.Size = new System.Drawing.Size(63, 15);
+            this.labelMiddleName.Size = new System.Drawing.Size(66, 15);
             this.labelMiddleName.TabIndex = 2;
-            this.labelMiddleName.Text = "Отчество";
+            this.labelMiddleName.Text = "Отчество:";
             // 
             // labelPosition
             // 
@@ -91,9 +91,9 @@
             this.labelPosition.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPosition.Location = new System.Drawing.Point(9, 134);
             this.labelPosition.Name = "labelPosition";
-            this.labelPosition.Size = new System.Drawing.Size(74, 15);
+            this.labelPosition.Size = new System.Drawing.Size(77, 15);
             this.labelPosition.TabIndex = 3;
-            this.labelPosition.Text = "Должность";
+            this.labelPosition.Text = "Должность:";
             // 
             // labelPhone
             // 
@@ -101,9 +101,9 @@
             this.labelPhone.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPhone.Location = new System.Drawing.Point(9, 173);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(58, 15);
+            this.labelPhone.Size = new System.Drawing.Size(61, 15);
             this.labelPhone.TabIndex = 4;
-            this.labelPhone.Text = "Телефон";
+            this.labelPhone.Text = "Телефон:";
             this.labelPhone.Click += new System.EventHandler(this.label5_Click);
             // 
             // labelTimeWork
@@ -112,9 +112,9 @@
             this.labelTimeWork.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelTimeWork.Location = new System.Drawing.Point(9, 212);
             this.labelTimeWork.Name = "labelTimeWork";
-            this.labelTimeWork.Size = new System.Drawing.Size(93, 15);
+            this.labelTimeWork.Size = new System.Drawing.Size(96, 15);
             this.labelTimeWork.TabIndex = 5;
-            this.labelTimeWork.Text = "Время работы";
+            this.labelTimeWork.Text = "Время работы:";
             // 
             // textBoxFirstName
             // 
@@ -187,39 +187,37 @@
             this.listViewPersonal.View = System.Windows.Forms.View.Details;
             this.listViewPersonal.SelectedIndexChanged += new System.EventHandler(this.listViewPersonal_SelectedIndexChanged);
             // 
+            // Id
+            // 
+            this.Id.Text = "ID";
+            // 
             // FirstName
             // 
-            this.FirstName.DisplayIndex = 1;
             this.FirstName.Text = "Имя";
             this.FirstName.Width = 83;
             // 
             // LastName
             // 
-            this.LastName.DisplayIndex = 2;
             this.LastName.Text = "Фамилия";
             this.LastName.Width = 90;
             // 
             // MiddleName
             // 
-            this.MiddleName.DisplayIndex = 3;
             this.MiddleName.Text = "Отчество";
             this.MiddleName.Width = 93;
             // 
             // Position
             // 
-            this.Position.DisplayIndex = 4;
             this.Position.Text = "Должность";
             this.Position.Width = 94;
             // 
             // Phone
             // 
-            this.Phone.DisplayIndex = 5;
             this.Phone.Text = "Телефон";
             this.Phone.Width = 101;
             // 
             // TimeWork
             // 
-            this.TimeWork.DisplayIndex = 6;
             this.TimeWork.Text = "Время работы";
             this.TimeWork.Width = 100;
             // 
@@ -268,17 +266,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(448, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(129, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(251, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(612, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
-            // 
-            // Id
-            // 
-            this.Id.DisplayIndex = 0;
-            this.Id.Text = "ID";
             // 
             // FormPersonals
             // 
@@ -304,7 +297,8 @@
             this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.labelFirstName);
             this.Name = "FormPersonals";
-            this.Text = "FormPersonals";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Персонал";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

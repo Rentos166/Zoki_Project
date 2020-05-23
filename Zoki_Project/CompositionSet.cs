@@ -17,7 +17,6 @@ namespace Zoki_Project
         public int Id { get; set; }
         public int IdProduct { get; set; }
         public int IdProvider { get; set; }
-        public int Number { get; set; }
     
         public virtual ProductSet ProductSet { get; set; }
         public virtual ProviderSet ProviderSet { get; set; }

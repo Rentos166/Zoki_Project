@@ -14,6 +14,13 @@ namespace Zoki_Project
     
     public partial class PersonalSet
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PersonalSet()
+        {
+            this.CustomSet = new HashSet<CustomSet>();
+            this.HotelSet = new HashSet<HotelSet>();
+        }
+    
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
@@ -21,5 +28,10 @@ namespace Zoki_Project
         public string Position { get; set; }
         public string Phone { get; set; }
         public string WorkTime { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CustomSet> CustomSet { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HotelSet> HotelSet { get; set; }
     }
 }

@@ -18,20 +18,22 @@ namespace Zoki_Project
             listViewProviders.Items.Clear();
             //Проходимся по коллекции клиентов, которые находятся в базе с помощью foreach
             foreach (ProviderSet providerSet in Program.zokiDb.ProviderSet)
-            {
-                //создаем новый элемент в listView
-                //для этого создаем новый массив строк
-                ListViewItem item = new ListViewItem(new string[]
-                {
+            {      
+                    //создаем новый элемент в listView
+                    //для этого создаем новый массив строк
+                    ListViewItem item = new ListViewItem(new string[]
+                    {
                     //указываем необходимые поля
                     providerSet.Id.ToString(),
                     providerSet.CompanyName,
+                    providerSet.TypeProduct,
                     providerSet.Product,
-                    providerSet.Address,
+                    "г. " + providerSet.Address_City+", " + "ул. " + providerSet.Address_Street+", "+
+                    "д. " + providerSet.Address_House,
                     providerSet.Phone,
                     providerSet.Email
 
-                });
+                    });
                 //указываем по какому тегу будем брать элементы
                 item.Tag = providerSet;
                 //добавляем элементы в listView для отображения
@@ -41,6 +43,7 @@ namespace Zoki_Project
         public FormProviders()
         {
             InitializeComponent();
+            comboBoxType.SelectedIndex = 0;
             ShowProviders();
         }
 
@@ -58,14 +61,28 @@ namespace Zoki_Project
                 //Делаем ссылку на объект, который хранится в textBox-ax
                 providerSet.CompanyName = textBoxCompanyName.Text;
                 providerSet.Product = textBoxProduct.Text;
-                providerSet.Address = textBoxAddress.Text;
+                providerSet.Address_City = textBoxCity.Text;
+                providerSet.Address_Street = textBoxStreet.Text;
+                providerSet.Address_House = textBoxHouse.Text;
                 providerSet.Phone = textBoxPhone.Text;
                 providerSet.Email = textBoxEmail.Text;
-                if (providerSet.CompanyName == "" || providerSet.Product == "" || providerSet.Address == "" || providerSet.Email == "")
+                if (comboBoxType.SelectedIndex == 0)
+                {
+                    providerSet.TypeProduct = "Для кошек";
+                }
+                else if (comboBoxType.SelectedIndex == 1)
+                {
+                    providerSet.TypeProduct = "Для собак";
+                }
+                else
+                {
+                    providerSet.TypeProduct = "Для рыбок";
+                }
+                if (providerSet.CompanyName == "" || providerSet.Product == "" || providerSet.TypeProduct =="")
                 {
                     throw new Exception("Данные о поставщике не заполнены");
                 }
-                //Добавляем в таблицу PersonalSet нового клиента providerSet
+                //Добавляем в таблицу ProviderSet нового клиента providerSet
                 Program.zokiDb.ProviderSet.Add(providerSet);
                 //Сохраняем изменения в модели zokiDb (экземпляр которой был создан ранее)
                 Program.zokiDb.SaveChanges();
@@ -86,10 +103,24 @@ namespace Zoki_Project
                     //указываем, что может быть изменено
                     providerSet.CompanyName = textBoxCompanyName.Text;
                     providerSet.Product = textBoxProduct.Text;
-                    providerSet.Address = textBoxAddress.Text;
+                    providerSet.Address_City = textBoxCity.Text;
+                    providerSet.Address_Street = textBoxStreet.Text;
+                    providerSet.Address_House = textBoxHouse.Text;
                     providerSet.Phone = textBoxPhone.Text;
                     providerSet.Email = textBoxEmail.Text;
-                    if (providerSet.CompanyName == "" || providerSet.Product == "" || providerSet.Address == "" || providerSet.Email == "")
+                    if (comboBoxType.SelectedIndex == 0)
+                    {
+                        providerSet.TypeProduct = "Для кошек";
+                    }
+                    else if (comboBoxType.SelectedIndex == 1)
+                    {
+                        providerSet.TypeProduct = "Для собак";
+                    }
+                    else
+                    {
+                        providerSet.TypeProduct = "Для рыбок";
+                    }
+                    if (providerSet.CompanyName == "" || providerSet.Product == "" || providerSet.TypeProduct == "")
                     {
                         throw new Exception("Данные о поставщике не заполнены");
                     }
@@ -110,18 +141,36 @@ namespace Zoki_Project
                 //указываем, что может быть изменено
                 textBoxCompanyName.Text = providerSet.CompanyName;
                 textBoxProduct.Text = providerSet.Product;
-                textBoxAddress.Text = providerSet.Address;
+                providerSet.Address_City = textBoxCity.Text;
+                providerSet.Address_Street = textBoxStreet.Text;
+                providerSet.Address_House = textBoxHouse.Text;
                 textBoxPhone.Text = providerSet.Phone;
                 textBoxEmail.Text = providerSet.Email;
+                if (comboBoxType.SelectedIndex == 0)
+                {
+                    providerSet.TypeProduct = "Для кошек";
+                }
+                else if (comboBoxType.SelectedIndex == 1)
+                {
+                    providerSet.TypeProduct = "Для собак";
+                }
+                else
+                {
+                    providerSet.TypeProduct = "Для рыбок";
+                }
             }
             else
             {
                 //условие, иначе, если не выбран ни один элемент, то задаем пустые поля
                 textBoxCompanyName.Text = "";
                 textBoxProduct.Text = "";
-                textBoxAddress.Text = "";
+                textBoxCity.Text = "";
                 textBoxPhone.Text = "";
                 textBoxEmail.Text = "";
+                textBoxCity.Text = "";
+                textBoxHouse.Text = "";
+                textBoxStreet.Text = "";
+                comboBoxType.SelectedItem = null;
             }
         }
 
@@ -145,9 +194,12 @@ namespace Zoki_Project
                 //очищаем textBox-ы
                 textBoxCompanyName.Text = "";
                 textBoxProduct.Text = "";
-                textBoxAddress.Text = "";
+                textBoxCity.Text = "";
+                textBoxHouse.Text = "";
+                textBoxStreet.Text = "";
                 textBoxPhone.Text = "";
                 textBoxEmail.Text = "";
+                comboBoxType.SelectedItem = null;
             }
             //если возникает какая-то ошибка, к примеру, запись используется, выводим всплывающее сообщение
             catch

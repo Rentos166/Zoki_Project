@@ -23,9 +23,12 @@ namespace Zoki_Project
     
         public int Id { get; set; }
         public string CompanyName { get; set; }
+        public string TypeProduct { get; set; }
         public string Product { get; set; }
         public string Phone { get; set; }
-        public string Address { get; set; }
+        public string Address_City { get; set; }
+        public string Address_Street { get; set; }
+        public string Address_House { get; set; }
         public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

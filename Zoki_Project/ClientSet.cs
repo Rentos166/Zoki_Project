@@ -25,9 +25,12 @@ namespace Zoki_Project
         public string Firstname { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
+        public string Address_City { get; set; }
+        public string Address_Street { get; set; }
+        public string Address_House { get; set; }
+        public string Address_Room { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string Address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CustomSet> CustomSet { get; set; }

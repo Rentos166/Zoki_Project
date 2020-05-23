@@ -73,11 +73,29 @@
     <Compile Include="FormClients.Designer.cs">
       <DependentUpon>FormClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormComposition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComposition.Designer.cs">
+      <DependentUpon>FormComposition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustoms.Designer.cs">
+      <DependentUpon>FormCustoms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPersonals.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPersonals.Designer.cs">
       <DependentUpon>FormPersonals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduct.Designer.cs">
+      <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProviders.cs">
       <SubType>Form</SubType>
@@ -126,8 +144,17 @@
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormComposition.resx">
+      <DependentUpon>FormComposition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustoms.resx">
+      <DependentUpon>FormCustoms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPersonals.resx">
       <DependentUpon>FormPersonals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProduct.resx">
+      <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProviders.resx">
       <DependentUpon>FormProviders.cs</DependentUpon>

@@ -94,6 +94,7 @@
             this.buttonOpenProducts.TabIndex = 3;
             this.buttonOpenProducts.Text = "Товары";
             this.buttonOpenProducts.UseVisualStyleBackColor = false;
+            this.buttonOpenProducts.Click += new System.EventHandler(this.buttonOpenProducts_Click);
             // 
             // buttonOpenComposition
             // 
@@ -107,6 +108,7 @@
             this.buttonOpenComposition.TabIndex = 4;
             this.buttonOpenComposition.Text = "Склад";
             this.buttonOpenComposition.UseVisualStyleBackColor = false;
+            this.buttonOpenComposition.Click += new System.EventHandler(this.buttonOpenComposition_Click);
             // 
             // buttonOpenCustoms
             // 
@@ -120,6 +122,7 @@
             this.buttonOpenCustoms.TabIndex = 5;
             this.buttonOpenCustoms.Text = "Заказы";
             this.buttonOpenCustoms.UseVisualStyleBackColor = false;
+            this.buttonOpenCustoms.Click += new System.EventHandler(this.buttonOpenCustoms_Click);
             // 
             // buttonOpenHostel
             // 
