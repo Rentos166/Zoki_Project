@@ -43,7 +43,6 @@ namespace Zoki_Project
         public FormProviders()
         {
             InitializeComponent();
-            comboBoxType.SelectedIndex = 0;
             ShowProviders();
         }
 
@@ -124,6 +123,7 @@ namespace Zoki_Project
                     {
                         throw new Exception("Данные о поставщике не заполнены");
                     }
+                    comboBoxType.SelectedItem = null;
                     //Сохраняем изменения в модели zokiDb (экземпляр которой был создан ранее)
                     Program.zokiDb.SaveChanges();
                     ShowProviders();
@@ -141,23 +141,12 @@ namespace Zoki_Project
                 //указываем, что может быть изменено
                 textBoxCompanyName.Text = providerSet.CompanyName;
                 textBoxProduct.Text = providerSet.Product;
-                providerSet.Address_City = textBoxCity.Text;
-                providerSet.Address_Street = textBoxStreet.Text;
-                providerSet.Address_House = textBoxHouse.Text;
+                textBoxCity.Text = providerSet.Address_City;
+                textBoxStreet.Text = providerSet.Address_Street;
+                textBoxHouse.Text = providerSet.Address_House;
                 textBoxPhone.Text = providerSet.Phone;
                 textBoxEmail.Text = providerSet.Email;
-                if (comboBoxType.SelectedIndex == 0)
-                {
-                    providerSet.TypeProduct = "Для кошек";
-                }
-                else if (comboBoxType.SelectedIndex == 1)
-                {
-                    providerSet.TypeProduct = "Для собак";
-                }
-                else
-                {
-                    providerSet.TypeProduct = "Для рыбок";
-                }
+                comboBoxType.Text = providerSet.TypeProduct;
             }
             else
             {

@@ -43,13 +43,12 @@
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MiddleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxHouse = new System.Windows.Forms.TextBox();
             this.labelHouse = new System.Windows.Forms.Label();
             this.textBoxStreet = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.labelCity = new System.Windows.Forms.Label();
             this.textBoxRoom = new System.Windows.Forms.TextBox();
             this.labelRoom = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,6 +195,11 @@
             this.MiddleName.Text = "Отчество";
             this.MiddleName.Width = 85;
             // 
+            // Address
+            // 
+            this.Address.Text = "Адрес";
+            this.Address.Width = 95;
+            // 
             // Phone
             // 
             this.Phone.Text = "Телефон";
@@ -205,11 +210,6 @@
             this.Email.Text = "Почта";
             this.Email.Width = 78;
             // 
-            // Address
-            // 
-            this.Address.Text = "Адрес";
-            this.Address.Width = 95;
-            // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -218,7 +218,7 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonAdd.Location = new System.Drawing.Point(385, 335);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(103, 45);
+            this.buttonAdd.Size = new System.Drawing.Size(103, 48);
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -232,7 +232,7 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonEdit.Location = new System.Drawing.Point(494, 335);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(103, 45);
+            this.buttonEdit.Size = new System.Drawing.Size(103, 48);
             this.buttonEdit.TabIndex = 14;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -246,21 +246,11 @@
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonDel.Location = new System.Drawing.Point(603, 335);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(103, 45);
+            this.buttonDel.Size = new System.Drawing.Size(103, 48);
             this.buttonDel.TabIndex = 15;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(570, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // textBoxHouse
             // 
@@ -334,12 +324,22 @@
             this.labelRoom.TabIndex = 36;
             this.labelRoom.Text = "Квартира:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(136, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(570, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(708, 385);
+            this.ClientSize = new System.Drawing.Size(708, 390);
             this.Controls.Add(this.textBoxRoom);
             this.Controls.Add(this.labelRoom);
             this.Controls.Add(this.textBoxHouse);

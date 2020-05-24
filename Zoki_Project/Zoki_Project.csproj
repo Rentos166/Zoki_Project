@@ -67,6 +67,12 @@
     <Compile Include="FinanceSet.cs">
       <DependentUpon>ModelZoki.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthorization.Designer.cs">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormClients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,18 @@
     </Compile>
     <Compile Include="FormCustoms.Designer.cs">
       <DependentUpon>FormCustoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFinance.Designer.cs">
+      <DependentUpon>FormFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHotel.Designer.cs">
+      <DependentUpon>FormHotel.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPersonals.cs">
       <SubType>Form</SubType>
@@ -141,6 +159,9 @@
     <Compile Include="Users.cs">
       <DependentUpon>ModelZoki.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAuthorization.resx">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClients.resx">
       <DependentUpon>FormClients.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +170,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCustoms.resx">
       <DependentUpon>FormCustoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFinance.resx">
+      <DependentUpon>FormFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHotel.resx">
+      <DependentUpon>FormHotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPersonals.resx">
       <DependentUpon>FormPersonals.cs</DependentUpon>

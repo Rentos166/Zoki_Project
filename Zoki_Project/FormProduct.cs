@@ -78,6 +78,7 @@ namespace Zoki_Project
                 textBoxNameProduct.Text = productSet.Name;
                 textBoxNumber.Text = productSet.Number.ToString();
                 textBoxPrice.Text = productSet.Price.ToString();
+                comboBoxType.Text = productSet.Type;
             }
             else
             {
@@ -206,6 +207,16 @@ namespace Zoki_Project
             {
                 e.Handled = true;
             }
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNumber_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

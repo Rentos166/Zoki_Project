@@ -41,6 +41,7 @@
             this.listViewProviders = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Phone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,7 +51,6 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelType = new System.Windows.Forms.Label();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.labelStreet = new System.Windows.Forms.Label();
             this.textBoxHouse = new System.Windows.Forms.TextBox();
@@ -181,6 +181,11 @@
             this.CompanyName.Text = "Название компании";
             this.CompanyName.Width = 140;
             // 
+            // Type
+            // 
+            this.Type.Text = "Тип товара";
+            this.Type.Width = 86;
+            // 
             // Product
             // 
             this.Product.Text = "Товар";
@@ -209,7 +214,7 @@
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonDel.Location = new System.Drawing.Point(741, 306);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(103, 45);
+            this.buttonDel.Size = new System.Drawing.Size(103, 48);
             this.buttonDel.TabIndex = 22;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -223,7 +228,7 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonEdit.Location = new System.Drawing.Point(632, 306);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(103, 45);
+            this.buttonEdit.Size = new System.Drawing.Size(103, 48);
             this.buttonEdit.TabIndex = 21;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -237,7 +242,7 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonAdd.Location = new System.Drawing.Point(523, 306);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(103, 45);
+            this.buttonAdd.Size = new System.Drawing.Size(103, 48);
             this.buttonAdd.TabIndex = 20;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -264,11 +269,6 @@
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(121, 21);
             this.comboBoxType.TabIndex = 25;
-            // 
-            // Type
-            // 
-            this.Type.Text = "Тип товара";
-            this.Type.Width = 86;
             // 
             // textBoxStreet
             // 
@@ -321,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(848, 357);
+            this.ClientSize = new System.Drawing.Size(848, 359);
             this.Controls.Add(this.textBoxHouse);
             this.Controls.Add(this.labelHouse);
             this.Controls.Add(this.textBoxStreet);

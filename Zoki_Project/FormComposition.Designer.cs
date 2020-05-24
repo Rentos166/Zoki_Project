@@ -98,7 +98,7 @@
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonDel.Location = new System.Drawing.Point(440, 279);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(95, 30);
+            this.buttonDel.Size = new System.Drawing.Size(95, 48);
             this.buttonDel.TabIndex = 42;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -112,7 +112,7 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonEdit.Location = new System.Drawing.Point(339, 279);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(95, 30);
+            this.buttonEdit.Size = new System.Drawing.Size(95, 48);
             this.buttonEdit.TabIndex = 41;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -126,7 +126,7 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonAdd.Location = new System.Drawing.Point(238, 279);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(95, 30);
+            this.buttonAdd.Size = new System.Drawing.Size(95, 48);
             this.buttonAdd.TabIndex = 40;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -183,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(550, 318);
+            this.ClientSize = new System.Drawing.Size(550, 330);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.comboBoxProduct);
             this.Controls.Add(this.labelProduct);

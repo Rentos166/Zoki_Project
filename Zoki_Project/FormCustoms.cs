@@ -139,16 +139,16 @@ namespace Zoki_Project
             {
                 //ищем элемент из таблицы по тегу
                 CustomSet customSet = listViewCustoms.SelectedItems[0].Tag as CustomSet;
-                comboBoxClient.SelectedIndex = comboBoxClient.FindString(customSet.IdClient.ToString());
-                comboBoxProduct.SelectedIndex = comboBoxProduct.FindString(customSet.IdProduct.ToString());
-                comboBoxPersonal.SelectedIndex = comboBoxPersonal.FindString(customSet.IdPersonal.ToString());
+                customSet.IdClient = Convert.ToInt32(comboBoxClient.SelectedItem.ToString().Split('.')[0]);
+                customSet.IdProduct = Convert.ToInt32(comboBoxProduct.SelectedItem.ToString().Split('.')[0]);
+                customSet.IdPersonal = Convert.ToInt32(comboBoxPersonal.SelectedItem.ToString().Split('.')[0]);
                 customSet.Date = textBoxDate.Text;
                 customSet.NumberProduct = Convert.ToInt32(textBoxNumberProduct.Text);
                 Program.zokiDb.SaveChanges();
                 ShowCustoms();
             }
             else MessageBox.Show("Данные не выбраны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            
         }
 
         private void buttonDel_Click(object sender, EventArgs e)
@@ -175,6 +175,24 @@ namespace Zoki_Project
 
                 MessageBox.Show("Невозможно удалить, эта запись используется", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        private void FormCustoms_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58) && number != 46 && number != 8 && number != 47) //цифры, клавиша BackSpace, точка 
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNumberProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+            if ((e.KeyChar <= 47 || e.KeyChar >= 58)  && number != 8) //цифры, клавиша BackSpace 
+            {
+                e.Handled = true;
             }
         }
     }

@@ -38,19 +38,19 @@
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.IdClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FioClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PhoneClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.IdPersonal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FioPersonal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelDate = new System.Windows.Forms.Label();
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.PhoneClient = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelNumberProduct = new System.Windows.Forms.Label();
             this.textBoxNumberProduct = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -152,6 +152,11 @@
             this.FioClient.Text = "ФИО клиента";
             this.FioClient.Width = 136;
             // 
+            // PhoneClient
+            // 
+            this.PhoneClient.Text = "Номер клиента";
+            this.PhoneClient.Width = 110;
+            // 
             // IdPersonal
             // 
             this.IdPersonal.Text = "Id сотрудника";
@@ -161,6 +166,26 @@
             // 
             this.FioPersonal.Text = "ФИО сотрудника";
             this.FioPersonal.Width = 140;
+            // 
+            // Type
+            // 
+            this.Type.Text = "Тип товара";
+            this.Type.Width = 114;
+            // 
+            // Product
+            // 
+            this.Product.Text = "Товар";
+            this.Product.Width = 102;
+            // 
+            // Number
+            // 
+            this.Number.Text = "Количество";
+            this.Number.Width = 82;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Дата";
+            this.Date.Width = 95;
             // 
             // pictureBoxLogo
             // 
@@ -188,6 +213,7 @@
             this.textBoxDate.Name = "textBoxDate";
             this.textBoxDate.Size = new System.Drawing.Size(133, 20);
             this.textBoxDate.TabIndex = 58;
+            this.textBoxDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormCustoms_KeyPress);
             // 
             // buttonDel
             // 
@@ -195,9 +221,9 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonDel.Location = new System.Drawing.Point(962, 256);
+            this.buttonDel.Location = new System.Drawing.Point(945, 256);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(176, 30);
+            this.buttonDel.Size = new System.Drawing.Size(187, 48);
             this.buttonDel.TabIndex = 61;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -209,9 +235,9 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonEdit.Location = new System.Drawing.Point(790, 256);
+            this.buttonEdit.Location = new System.Drawing.Point(748, 256);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(166, 30);
+            this.buttonEdit.Size = new System.Drawing.Size(187, 48);
             this.buttonEdit.TabIndex = 60;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -223,38 +249,13 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonAdd.Location = new System.Drawing.Point(597, 256);
+            this.buttonAdd.Location = new System.Drawing.Point(555, 256);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(187, 30);
+            this.buttonAdd.Size = new System.Drawing.Size(187, 48);
             this.buttonAdd.TabIndex = 59;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // Type
-            // 
-            this.Type.Text = "Тип товара";
-            this.Type.Width = 114;
-            // 
-            // Number
-            // 
-            this.Number.Text = "Количество";
-            this.Number.Width = 82;
-            // 
-            // Date
-            // 
-            this.Date.Text = "Дата";
-            this.Date.Width = 95;
-            // 
-            // Product
-            // 
-            this.Product.Text = "Товар";
-            this.Product.Width = 102;
-            // 
-            // PhoneClient
-            // 
-            this.PhoneClient.Text = "Номер клиента";
-            this.PhoneClient.Width = 110;
             // 
             // labelNumberProduct
             // 
@@ -272,13 +273,14 @@
             this.textBoxNumberProduct.Name = "textBoxNumberProduct";
             this.textBoxNumberProduct.Size = new System.Drawing.Size(132, 20);
             this.textBoxNumberProduct.TabIndex = 63;
+            this.textBoxNumberProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumberProduct_KeyPress);
             // 
             // FormCustoms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1143, 294);
+            this.ClientSize = new System.Drawing.Size(1143, 308);
             this.Controls.Add(this.textBoxNumberProduct);
             this.Controls.Add(this.labelNumberProduct);
             this.Controls.Add(this.buttonDel);
@@ -297,6 +299,7 @@
             this.Name = "FormCustoms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заказы";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormCustoms_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

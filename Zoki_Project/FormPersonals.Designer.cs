@@ -229,7 +229,7 @@
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonDel.Location = new System.Drawing.Point(638, 255);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(103, 45);
+            this.buttonDel.Size = new System.Drawing.Size(103, 48);
             this.buttonDel.TabIndex = 18;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -243,7 +243,7 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonEdit.Location = new System.Drawing.Point(529, 255);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(103, 45);
+            this.buttonEdit.Size = new System.Drawing.Size(103, 48);
             this.buttonEdit.TabIndex = 17;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -257,7 +257,7 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonAdd.Location = new System.Drawing.Point(420, 255);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(103, 45);
+            this.buttonAdd.Size = new System.Drawing.Size(103, 48);
             this.buttonAdd.TabIndex = 16;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;

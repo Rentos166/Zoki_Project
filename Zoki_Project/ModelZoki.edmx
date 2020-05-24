@@ -44,9 +44,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Gain" Type="int" />
-          <Property Name="Costs" Type="int" />
-          <Property Name="Date" Type="date" />
+          <Property Name="Gain" Type="int" Nullable="false" />
+          <Property Name="Costs" Type="int" Nullable="false" />
+          <Property Name="Date" Type="nvarchar(max)" />
+          <Property Name="Profit" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="HotelSet">
           <Key>
@@ -295,9 +296,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Gain" Type="Int32" />
-          <Property Name="Costs" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Gain" Type="Int32" Nullable="false" />
+          <Property Name="Costs" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Profit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="HotelSet">
           <Key>
@@ -554,6 +556,7 @@
                 <ScalarProperty Name="Gain" ColumnName="Gain" />
                 <ScalarProperty Name="Costs" ColumnName="Costs" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Profit" ColumnName="Profit" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

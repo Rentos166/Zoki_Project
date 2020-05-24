@@ -15,6 +15,8 @@ namespace Zoki_Project
         public Menu()
         {
             InitializeComponent();
+            if (FormAuthorization.users.type == "seller") buttonOpenPersonal.Enabled = false;
+            labelHello.Text = "Приветствую тебя, " + FormAuthorization.users.login;
         }
 
         private void buttonOpenClients_Click(object sender, EventArgs e)
@@ -24,9 +26,10 @@ namespace Zoki_Project
             formClient.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void buttonOpenHotel_Click(object sender, EventArgs e)
         {
-
+            Form formHotel = new FormHotel();
+            formHotel.Show();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -64,6 +67,12 @@ namespace Zoki_Project
         {
             Form formCustoms = new FormCustoms();
             formCustoms.Show();
+        }
+
+        private void buttonOpenFinance_Click(object sender, EventArgs e)
+        {
+            Form formFinance = new FormFinance();
+            formFinance.Show();
         }
     }
 }

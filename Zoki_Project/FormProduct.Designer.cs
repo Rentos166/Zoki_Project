@@ -33,9 +33,10 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.listViewProducts = new System.Windows.Forms.ListView();
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IdCompany = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CompanyName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,7 +48,6 @@
             this.labelNameProduct = new System.Windows.Forms.Label();
             this.comboBoxProvider = new System.Windows.Forms.ComboBox();
             this.labelProvider = new System.Windows.Forms.Label();
-            this.IdCompany = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.labelType = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
@@ -62,7 +62,7 @@
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonDel.Location = new System.Drawing.Point(787, 271);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(132, 30);
+            this.buttonDel.Size = new System.Drawing.Size(132, 48);
             this.buttonDel.TabIndex = 39;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -76,7 +76,7 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonEdit.Location = new System.Drawing.Point(649, 271);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(132, 30);
+            this.buttonEdit.Size = new System.Drawing.Size(132, 48);
             this.buttonEdit.TabIndex = 38;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
             this.buttonAdd.Location = new System.Drawing.Point(511, 271);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(132, 30);
+            this.buttonAdd.Size = new System.Drawing.Size(132, 48);
             this.buttonAdd.TabIndex = 37;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -124,11 +124,6 @@
             // 
             this.Id.Text = "ID";
             // 
-            // CompanyName
-            // 
-            this.CompanyName.Text = "Название компании";
-            this.CompanyName.Width = 140;
-            // 
             // Type
             // 
             this.Type.Text = "Тип товара";
@@ -138,6 +133,16 @@
             // 
             this.Product.Text = "Товар";
             this.Product.Width = 91;
+            // 
+            // IdCompany
+            // 
+            this.IdCompany.Text = "Id поставщика";
+            this.IdCompany.Width = 97;
+            // 
+            // CompanyName
+            // 
+            this.CompanyName.Text = "Название компании";
+            this.CompanyName.Width = 140;
             // 
             // Address
             // 
@@ -161,6 +166,7 @@
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(122, 21);
             this.textBoxPrice.TabIndex = 31;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormProducts_KeyPress);
             // 
             // textBoxNumber
@@ -170,6 +176,7 @@
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.Size = new System.Drawing.Size(122, 21);
             this.textBoxNumber.TabIndex = 30;
+            this.textBoxNumber.TextChanged += new System.EventHandler(this.textBoxNumber_TextChanged);
             this.textBoxNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormProducts_KeyPress);
             // 
             // textBoxNameProduct
@@ -228,11 +235,6 @@
             this.labelProvider.TabIndex = 43;
             this.labelProvider.Text = "Поставщик:";
             // 
-            // IdCompany
-            // 
-            this.IdCompany.Text = "Id поставщика";
-            this.IdCompany.Width = 97;
-            // 
             // comboBoxType
             // 
             this.comboBoxType.FormattingEnabled = true;
@@ -270,7 +272,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(924, 307);
+            this.ClientSize = new System.Drawing.Size(924, 323);
             this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.labelType);
             this.Controls.Add(this.comboBoxProvider);
