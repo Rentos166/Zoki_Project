@@ -64,7 +64,7 @@
             this.comboBoxClient.FormattingEnabled = true;
             this.comboBoxClient.Location = new System.Drawing.Point(12, 56);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(133, 21);
+            this.comboBoxClient.Size = new System.Drawing.Size(146, 21);
             this.comboBoxClient.TabIndex = 56;
             // 
             // labelClient
@@ -91,7 +91,7 @@
             // 
             this.textBoxDate.Location = new System.Drawing.Point(12, 217);
             this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(133, 20);
+            this.textBoxDate.Size = new System.Drawing.Size(146, 20);
             this.textBoxDate.TabIndex = 65;
             this.textBoxDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDate_KeyPress);
             // 
@@ -109,7 +109,7 @@
             // 
             this.textBoxNumberRoom.Location = new System.Drawing.Point(12, 176);
             this.textBoxNumberRoom.Name = "textBoxNumberRoom";
-            this.textBoxNumberRoom.Size = new System.Drawing.Size(132, 20);
+            this.textBoxNumberRoom.Size = new System.Drawing.Size(146, 20);
             this.textBoxNumberRoom.TabIndex = 69;
             this.textBoxNumberRoom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumberRoom_KeyPress);
             // 
@@ -131,7 +131,7 @@
             "Для собак"});
             this.comboBoxTypeRoom.Location = new System.Drawing.Point(11, 139);
             this.comboBoxTypeRoom.Name = "comboBoxTypeRoom";
-            this.comboBoxTypeRoom.Size = new System.Drawing.Size(133, 21);
+            this.comboBoxTypeRoom.Size = new System.Drawing.Size(147, 21);
             this.comboBoxTypeRoom.TabIndex = 70;
             // 
             // textBoxNumberProduct
@@ -157,7 +157,7 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonDel.Location = new System.Drawing.Point(846, 243);
+            this.buttonDel.Location = new System.Drawing.Point(859, 243);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(192, 48);
             this.buttonDel.TabIndex = 75;
@@ -171,7 +171,7 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonEdit.Location = new System.Drawing.Point(648, 243);
+            this.buttonEdit.Location = new System.Drawing.Point(661, 243);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(192, 48);
             this.buttonEdit.TabIndex = 74;
@@ -185,7 +185,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonAdd.Location = new System.Drawing.Point(451, 243);
+            this.buttonAdd.Location = new System.Drawing.Point(464, 243);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(192, 48);
             this.buttonAdd.TabIndex = 73;
@@ -226,7 +226,7 @@
             this.listViewHotel.FullRowSelect = true;
             this.listViewHotel.GridLines = true;
             this.listViewHotel.HideSelection = false;
-            this.listViewHotel.Location = new System.Drawing.Point(151, 109);
+            this.listViewHotel.Location = new System.Drawing.Point(164, 109);
             this.listViewHotel.MultiSelect = false;
             this.listViewHotel.Name = "listViewHotel";
             this.listViewHotel.Size = new System.Drawing.Size(887, 128);
@@ -274,7 +274,7 @@
             this.comboBoxPersonal.FormattingEnabled = true;
             this.comboBoxPersonal.Location = new System.Drawing.Point(12, 98);
             this.comboBoxPersonal.Name = "comboBoxPersonal";
-            this.comboBoxPersonal.Size = new System.Drawing.Size(133, 21);
+            this.comboBoxPersonal.Size = new System.Drawing.Size(146, 21);
             this.comboBoxPersonal.TabIndex = 82;
             // 
             // labelPersonal
@@ -300,9 +300,9 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(151, 3);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(164, 3);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(882, 100);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(887, 100);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 79;
             this.pictureBoxLogo.TabStop = false;
@@ -312,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1045, 296);
+            this.ClientSize = new System.Drawing.Size(1059, 297);
             this.Controls.Add(this.comboBoxPersonal);
             this.Controls.Add(this.labelPersonal);
             this.Controls.Add(this.listViewHotel);

@@ -121,7 +121,7 @@
             this.textBoxFirstName.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxFirstName.Location = new System.Drawing.Point(12, 33);
             this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(100, 21);
+            this.textBoxFirstName.Size = new System.Drawing.Size(111, 21);
             this.textBoxFirstName.TabIndex = 6;
             // 
             // textBoxLastName
@@ -129,7 +129,7 @@
             this.textBoxLastName.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxLastName.Location = new System.Drawing.Point(12, 73);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(100, 21);
+            this.textBoxLastName.Size = new System.Drawing.Size(111, 21);
             this.textBoxLastName.TabIndex = 7;
             // 
             // textBoxMiddleName
@@ -137,7 +137,7 @@
             this.textBoxMiddleName.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxMiddleName.Location = new System.Drawing.Point(12, 111);
             this.textBoxMiddleName.Name = "textBoxMiddleName";
-            this.textBoxMiddleName.Size = new System.Drawing.Size(100, 21);
+            this.textBoxMiddleName.Size = new System.Drawing.Size(111, 21);
             this.textBoxMiddleName.TabIndex = 8;
             // 
             // textBoxPosition
@@ -145,7 +145,7 @@
             this.textBoxPosition.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPosition.Location = new System.Drawing.Point(12, 150);
             this.textBoxPosition.Name = "textBoxPosition";
-            this.textBoxPosition.Size = new System.Drawing.Size(100, 21);
+            this.textBoxPosition.Size = new System.Drawing.Size(111, 21);
             this.textBoxPosition.TabIndex = 9;
             // 
             // textBoxPhone
@@ -153,7 +153,7 @@
             this.textBoxPhone.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPhone.Location = new System.Drawing.Point(12, 189);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(100, 21);
+            this.textBoxPhone.Size = new System.Drawing.Size(111, 21);
             this.textBoxPhone.TabIndex = 10;
             // 
             // textBoxTimeWork
@@ -161,7 +161,7 @@
             this.textBoxTimeWork.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxTimeWork.Location = new System.Drawing.Point(12, 228);
             this.textBoxTimeWork.Name = "textBoxTimeWork";
-            this.textBoxTimeWork.Size = new System.Drawing.Size(100, 21);
+            this.textBoxTimeWork.Size = new System.Drawing.Size(111, 21);
             this.textBoxTimeWork.TabIndex = 11;
             // 
             // listViewPersonal

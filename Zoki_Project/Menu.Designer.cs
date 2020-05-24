@@ -36,9 +36,9 @@
             this.buttonOpenCustoms = new System.Windows.Forms.Button();
             this.buttonOpenHostel = new System.Windows.Forms.Button();
             this.buttonOpenFinance = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelHello = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOpenClients
@@ -153,15 +153,15 @@
             this.buttonOpenFinance.UseVisualStyleBackColor = false;
             this.buttonOpenFinance.Click += new System.EventHandler(this.buttonOpenFinance_Click);
             // 
-            // pictureBox1
+            // pictureBoxLogo
             // 
-            this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(264, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLogo.Image = global::Zoki_Project.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 32);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(264, 98);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 8;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // labelHello
             // 
@@ -180,7 +180,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(288, 642);
             this.Controls.Add(this.labelHello);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonOpenFinance);
             this.Controls.Add(this.buttonOpenHostel);
             this.Controls.Add(this.buttonOpenCustoms);
@@ -193,7 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zoki";
             this.Load += new System.EventHandler(this.Menu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +209,7 @@
         private System.Windows.Forms.Button buttonOpenCustoms;
         private System.Windows.Forms.Button buttonOpenHostel;
         private System.Windows.Forms.Button buttonOpenFinance;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelHello;
     }
 }

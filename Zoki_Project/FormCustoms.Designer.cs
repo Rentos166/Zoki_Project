@@ -61,7 +61,7 @@
             this.comboBoxPersonal.FormattingEnabled = true;
             this.comboBoxPersonal.Location = new System.Drawing.Point(12, 108);
             this.comboBoxPersonal.Name = "comboBoxPersonal";
-            this.comboBoxPersonal.Size = new System.Drawing.Size(133, 21);
+            this.comboBoxPersonal.Size = new System.Drawing.Size(210, 21);
             this.comboBoxPersonal.TabIndex = 50;
             this.comboBoxPersonal.SelectedIndexChanged += new System.EventHandler(this.comboBoxProduct_SelectedIndexChanged);
             // 
@@ -81,7 +81,7 @@
             this.comboBoxProduct.FormattingEnabled = true;
             this.comboBoxProduct.Location = new System.Drawing.Point(13, 150);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(132, 21);
+            this.comboBoxProduct.Size = new System.Drawing.Size(209, 21);
             this.comboBoxProduct.TabIndex = 52;
             // 
             // labelProduct
@@ -99,7 +99,7 @@
             this.comboBoxClient.FormattingEnabled = true;
             this.comboBoxClient.Location = new System.Drawing.Point(12, 60);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(133, 21);
+            this.comboBoxClient.Size = new System.Drawing.Size(210, 21);
             this.comboBoxClient.TabIndex = 54;
             // 
             // labelClient
@@ -129,7 +129,7 @@
             this.listViewCustoms.FullRowSelect = true;
             this.listViewCustoms.GridLines = true;
             this.listViewCustoms.HideSelection = false;
-            this.listViewCustoms.Location = new System.Drawing.Point(151, 122);
+            this.listViewCustoms.Location = new System.Drawing.Point(228, 122);
             this.listViewCustoms.MultiSelect = false;
             this.listViewCustoms.Name = "listViewCustoms";
             this.listViewCustoms.Size = new System.Drawing.Size(981, 128);
@@ -190,7 +190,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(151, 10);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(228, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(981, 106);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +211,7 @@
             // 
             this.textBoxDate.Location = new System.Drawing.Point(13, 230);
             this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(133, 20);
+            this.textBoxDate.Size = new System.Drawing.Size(209, 20);
             this.textBoxDate.TabIndex = 58;
             this.textBoxDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FormCustoms_KeyPress);
             // 
@@ -221,7 +221,7 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonDel.Location = new System.Drawing.Point(945, 256);
+            this.buttonDel.Location = new System.Drawing.Point(1022, 256);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(187, 48);
             this.buttonDel.TabIndex = 61;
@@ -235,7 +235,7 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonEdit.Location = new System.Drawing.Point(748, 256);
+            this.buttonEdit.Location = new System.Drawing.Point(825, 256);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(187, 48);
             this.buttonEdit.TabIndex = 60;
@@ -249,7 +249,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonAdd.Location = new System.Drawing.Point(555, 256);
+            this.buttonAdd.Location = new System.Drawing.Point(632, 256);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(187, 48);
             this.buttonAdd.TabIndex = 59;
@@ -271,7 +271,7 @@
             // 
             this.textBoxNumberProduct.Location = new System.Drawing.Point(13, 190);
             this.textBoxNumberProduct.Name = "textBoxNumberProduct";
-            this.textBoxNumberProduct.Size = new System.Drawing.Size(132, 20);
+            this.textBoxNumberProduct.Size = new System.Drawing.Size(209, 20);
             this.textBoxNumberProduct.TabIndex = 63;
             this.textBoxNumberProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumberProduct_KeyPress);
             // 
@@ -280,7 +280,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1143, 308);
+            this.ClientSize = new System.Drawing.Size(1216, 308);
             this.Controls.Add(this.textBoxNumberProduct);
             this.Controls.Add(this.labelNumberProduct);
             this.Controls.Add(this.buttonDel);

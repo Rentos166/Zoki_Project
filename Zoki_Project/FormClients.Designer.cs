@@ -57,8 +57,8 @@
             this.labelCity = new System.Windows.Forms.Label();
             this.textBoxRoom = new System.Windows.Forms.TextBox();
             this.labelRoom = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelFirstName
@@ -324,15 +324,15 @@
             this.labelRoom.TabIndex = 36;
             this.labelRoom.Text = "Квартира:";
             // 
-            // pictureBox1
+            // pictureBoxLogo
             // 
-            this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(570, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLogo.Image = global::Zoki_Project.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(136, 2);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(570, 94);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 16;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FormClients
             // 
@@ -348,7 +348,7 @@
             this.Controls.Add(this.labelStreet);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.labelCity);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -368,7 +368,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.FormClients_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,7 +397,7 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.TextBox textBoxHouse;
         private System.Windows.Forms.Label labelHouse;
         private System.Windows.Forms.TextBox textBoxStreet;

@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dd066d1964fe469a9eb18d0b239f744b" Name="Diagram1">
-        <EntityTypeShape EntityType="Zoki_ProjectModel.ClientSet" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.CompositionSet" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.CustomSet" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.FinanceSet" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.HotelSet" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.PersonalSet" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.ProductSet" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.ProviderSet" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Zoki_ProjectModel.Users" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="dd066d1964fe469a9eb18d0b239f744b" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Zoki_ProjectModel.ClientSet" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.CompositionSet" Width="1.5" PointX="5.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.CustomSet" Width="1.5" PointX="7" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.FinanceSet" Width="1.5" PointX="7" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.HotelSet" Width="1.5" PointX="2.625" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.PersonalSet" Width="1.5" PointX="4.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.ProductSet" Width="1.5" PointX="2.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.ProviderSet" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Zoki_ProjectModel.Users" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="Zoki_ProjectModel.FK_CustomSet_ClientSet" ManuallyRouted="false" />
         <AssociationConnector Association="Zoki_ProjectModel.FK_HotelSet_ClientSet" ManuallyRouted="false" />
         <AssociationConnector Association="Zoki_ProjectModel.FK_CompositionSet_ProductSet" ManuallyRouted="false" />

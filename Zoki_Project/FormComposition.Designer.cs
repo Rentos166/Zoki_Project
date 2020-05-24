@@ -57,10 +57,10 @@
             this.listViewComposition.FullRowSelect = true;
             this.listViewComposition.GridLines = true;
             this.listViewComposition.HideSelection = false;
-            this.listViewComposition.Location = new System.Drawing.Point(8, 113);
+            this.listViewComposition.Location = new System.Drawing.Point(12, 113);
             this.listViewComposition.MultiSelect = false;
             this.listViewComposition.Name = "listViewComposition";
-            this.listViewComposition.Size = new System.Drawing.Size(527, 160);
+            this.listViewComposition.Size = new System.Drawing.Size(491, 160);
             this.listViewComposition.TabIndex = 20;
             this.listViewComposition.UseCompatibleStateImageBehavior = false;
             this.listViewComposition.View = System.Windows.Forms.View.Details;
@@ -96,7 +96,7 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonDel.Location = new System.Drawing.Point(440, 279);
+            this.buttonDel.Location = new System.Drawing.Point(408, 279);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(95, 48);
             this.buttonDel.TabIndex = 42;
@@ -110,7 +110,7 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonEdit.Location = new System.Drawing.Point(339, 279);
+            this.buttonEdit.Location = new System.Drawing.Point(307, 279);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(95, 48);
             this.buttonEdit.TabIndex = 41;
@@ -124,7 +124,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonAdd.Location = new System.Drawing.Point(238, 279);
+            this.buttonAdd.Location = new System.Drawing.Point(206, 279);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(95, 48);
             this.buttonAdd.TabIndex = 40;
@@ -135,16 +135,16 @@
             // comboBoxProvider
             // 
             this.comboBoxProvider.FormattingEnabled = true;
-            this.comboBoxProvider.Location = new System.Drawing.Point(12, 86);
+            this.comboBoxProvider.Location = new System.Drawing.Point(12, 42);
             this.comboBoxProvider.Name = "comboBoxProvider";
-            this.comboBoxProvider.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxProvider.Size = new System.Drawing.Size(278, 21);
             this.comboBoxProvider.TabIndex = 46;
             // 
             // labelProvider
             // 
             this.labelProvider.AutoSize = true;
             this.labelProvider.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelProvider.Location = new System.Drawing.Point(8, 68);
+            this.labelProvider.Location = new System.Drawing.Point(8, 24);
             this.labelProvider.Name = "labelProvider";
             this.labelProvider.Size = new System.Drawing.Size(77, 15);
             this.labelProvider.TabIndex = 45;
@@ -153,16 +153,16 @@
             // comboBoxProduct
             // 
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(155, 86);
+            this.comboBoxProduct.Location = new System.Drawing.Point(12, 84);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxProduct.Size = new System.Drawing.Size(278, 21);
             this.comboBoxProduct.TabIndex = 48;
             // 
             // labelProduct
             // 
             this.labelProduct.AutoSize = true;
             this.labelProduct.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelProduct.Location = new System.Drawing.Point(151, 68);
+            this.labelProduct.Location = new System.Drawing.Point(9, 66);
             this.labelProduct.Name = "labelProduct";
             this.labelProduct.Size = new System.Drawing.Size(45, 15);
             this.labelProduct.TabIndex = 47;
@@ -171,9 +171,9 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(282, 1);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(296, 1);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(253, 106);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(207, 106);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 49;
             this.pictureBoxLogo.TabStop = false;
@@ -183,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(550, 330);
+            this.ClientSize = new System.Drawing.Size(515, 330);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.comboBoxProduct);
             this.Controls.Add(this.labelProduct);

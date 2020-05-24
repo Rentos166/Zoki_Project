@@ -55,8 +55,8 @@
             this.labelStreet = new System.Windows.Forms.Label();
             this.textBoxHouse = new System.Windows.Forms.TextBox();
             this.labelHouse = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxCity
@@ -306,15 +306,15 @@
             this.labelHouse.TabIndex = 28;
             this.labelHouse.Text = "Дом:";
             // 
-            // pictureBox1
+            // pictureBoxLogo
             // 
-            this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(134, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(710, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLogo.Image = global::Zoki_Project.Properties.Resources.logo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(134, 1);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(710, 133);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 23;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FormProviders
             // 
@@ -328,7 +328,7 @@
             this.Controls.Add(this.labelStreet);
             this.Controls.Add(this.comboBoxType);
             this.Controls.Add(this.labelType);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
@@ -347,7 +347,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поставщики";
             this.Load += new System.EventHandler(this.FormProviders_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,7 +375,7 @@
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelType;
         private System.Windows.Forms.ComboBox comboBoxType;
         private System.Windows.Forms.ColumnHeader Type;
