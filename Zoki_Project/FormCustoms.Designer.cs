@@ -71,9 +71,9 @@
             this.labelPersonal.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPersonal.Location = new System.Drawing.Point(8, 90);
             this.labelPersonal.Name = "labelPersonal";
-            this.labelPersonal.Size = new System.Drawing.Size(68, 15);
+            this.labelPersonal.Size = new System.Drawing.Size(72, 15);
             this.labelPersonal.TabIndex = 49;
-            this.labelPersonal.Text = "Персонал:";
+            this.labelPersonal.Text = "Сотрудник:";
             this.labelPersonal.Click += new System.EventHandler(this.labelProduct_Click);
             // 
             // comboBoxProduct
