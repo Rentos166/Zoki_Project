@@ -174,14 +174,14 @@
             this.Position,
             this.Phone,
             this.TimeWork});
-            this.listViewPersonal.Font = new System.Drawing.Font("Roboto Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewPersonal.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewPersonal.FullRowSelect = true;
             this.listViewPersonal.GridLines = true;
             this.listViewPersonal.HideSelection = false;
             this.listViewPersonal.Location = new System.Drawing.Point(129, 68);
             this.listViewPersonal.MultiSelect = false;
             this.listViewPersonal.Name = "listViewPersonal";
-            this.listViewPersonal.Size = new System.Drawing.Size(612, 181);
+            this.listViewPersonal.Size = new System.Drawing.Size(625, 181);
             this.listViewPersonal.TabIndex = 12;
             this.listViewPersonal.UseCompatibleStateImageBehavior = false;
             this.listViewPersonal.View = System.Windows.Forms.View.Details;
@@ -227,7 +227,7 @@
             this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDel.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonDel.Location = new System.Drawing.Point(638, 255);
+            this.buttonDel.Location = new System.Drawing.Point(651, 255);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(103, 48);
             this.buttonDel.TabIndex = 18;
@@ -241,7 +241,7 @@
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonEdit.Location = new System.Drawing.Point(529, 255);
+            this.buttonEdit.Location = new System.Drawing.Point(542, 255);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(103, 48);
             this.buttonEdit.TabIndex = 17;
@@ -255,7 +255,7 @@
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.Color.LightCoral;
-            this.buttonAdd.Location = new System.Drawing.Point(420, 255);
+            this.buttonAdd.Location = new System.Drawing.Point(433, 255);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(103, 48);
             this.buttonAdd.TabIndex = 16;
@@ -268,7 +268,7 @@
             this.pictureBox1.Image = global::Zoki_Project.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(129, -5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(612, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(625, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -278,7 +278,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(756, 308);
+            this.ClientSize = new System.Drawing.Size(762, 308);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
